@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contenedor{
+    width: 90%;
+    margin: auto;
+  }
+  
+  header{
+    background-color: #0494A2;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  header h1{
+    color: #FFF;
+    font-size: 50px;
+    padding: 10px 0;
+  }
+  
+  header h1 span{
+    color: #615229;
+    font-size: 25px;
+  }
+  
+  /* BANNER */
+  
+  .banner{
+    display: flex;
+
+    background-image: url(./background.wood.jpg);
+    background-size: cover;
+
+    height: 250px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  /* MAIN */
+  
+  main{
+    background: #FAFAFA;
+    padding-bottom: 20px;
+  }
+  
+  /* BOTONES */
+  
+  .seleccion{
+    height: 190px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .boton{
+    margin: auto;
+    text-align: center;
+  }
+  
+  .boton a{
+    border: 1px solid black;
+    padding: 50px 100px;
+    border-radius: 25px;
+    
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+    background-image: linear-gradient(to left bottom, #812f98, #9930ad, #b330c3, #ce2cd7, #eb23eb);
+}
+  
+  /* QUIENES SOMOS*/
+
+  .quienessomos{
+      width: 85%;
+      margin: auto;
+  }
+  
+  .quienessomos h3{
+    display: inline;
+    font-size: 35px;
+    border-bottom: 2px solid black;
+  }
+  
+  .quienessomos p{
+    margin-top: 20px;
+    font-size: 23px;
+  }
+  
+  .quienessomos span{
+    font-weight: bold;
+    
+  }
+
+  /* FOOTER */
+
+
+
+  footer{
+    display: flex;
+    align-items: center;
+
+    height: 25px;
+    background-color: cornflowerblue;
+    text-align: center;
+  }
+
+  footer p{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+  }
