@@ -1,113 +1,319 @@
 *{
     margin: 0;
     padding: 0;
-  }
-  
-  .contenedor{
-    width: 90%;
-    margin: auto;
-  }
-  
-  header{
-    background-color: #0494A2;
-    width: 100%;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  header h1{
-    color: #FFF;
-    font-size: 50px;
-    padding: 10px 0;
-  }
-  
-  header h1 span{
-    color: #615229;
-    font-size: 25px;
-  }
-  
-  /* BANNER */
-  
-  .banner{
-    display: flex;
-
-    background-image: url(./background.wood.jpg);
-    background-size: cover;
-
-    height: 250px;
-    text-align: center;
-    font-size: 35px;
-  }
-  
-  /* MAIN */
-  
-  main{
-    background: #FAFAFA;
-    padding-bottom: 20px;
-  }
-  
-  /* BOTONES */
-  
-  .seleccion{
-    height: 190px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .boton{
-    margin: auto;
-    text-align: center;
-  }
-  
-  .boton a{
-    border: 1px solid black;
-    padding: 50px 100px;
-    border-radius: 25px;
-    
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-
-    background-image: linear-gradient(to left bottom, #812f98, #9930ad, #b330c3, #ce2cd7, #eb23eb);
+    box-sizing: border-box;
 }
-  
-  /* QUIENES SOMOS*/
 
-  .quienessomos{
-      width: 85%;
-      margin: auto;
-  }
-  
-  .quienessomos h3{
-    display: inline;
-    font-size: 35px;
-    border-bottom: 2px solid black;
-  }
-  
-  .quienessomos p{
-    margin-top: 20px;
-    font-size: 23px;
-  }
-  
-  .quienessomos span{
-    font-weight: bold;
-    
-  }
+body{
+    background:#fff;
+    overflow-x: hidden;
+    font-family: "Segoe UI","Helvetica Neue",sans-serif;
+}
 
-  /* FOOTER */
+/*HEADER*/
+#header{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 60px;
+   background: #FDFDFD;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 9000;
+}
+
+.menu .logo-box{
+   margin-left: 20px;
+}
+
+.menu .logo-box h1{
+   font-size: 35px;
+   font-weight: 400;
+}
+
+.volver{
+    margin: auto 50px auto 0;
+    display: inline-block;
+}
+.volver.volver p{
+    display: inline-block;
+    margin: auto 15px;
+}
+
+.volver a{
+    text-decoration: none;
+    color: #000;
+}
+
+.volver a:hover:hover{
+    color: #f23528;
+}
+
+.menu .logo-box h1 span{
+    font-size: 20px;
+}
+
+/* img header */
+
+.img-header{
+   position: relative;
+   width: 100%;
+   height: 80vh;
+   background: url(../almohadones/20200902_185300.jpg);
+   background-attachment: fixed;  /* EFECTO PARALAX - NO SE MUEVE EN EL SCROLL */
+   background-position: center;
+   background-size: cover;
+}
+
+.img-header .welcome{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, .6);
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction:column;
+}
+
+.img-header .welcome h2{
+   font-size: 50px;
+   color: #fff;
+   font-weight: 200;
+}
+
+.img-header .welcome hr{
+   width: 400px;
+   height: 2px;
+   background: #fff;
+   border: none;
+   margin-top: 5px;
+}
+
+.img-header .welcome p{
+   font-size: 20px;
+   color: #fff;
+   margin-top: 20px;
+}
 
 
+/*SKEW*/
+.skew-abajo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width:  0 0 10vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
 
-  footer{
-    display: flex;
-    align-items: center;
+.skew-arriba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 10vh 100vw 0 0;
+    border-style: solid;
+    border-color:  #fff transparent transparent transparent;
+    z-index: 10;
+}
+/*DISEÑOS DE CAMAS/MUEBLES*/
 
-    height: 25px;
-    background-color: cornflowerblue;
+.carouseles h2{
     text-align: center;
-  }
+    font-size: 50px;
+    font-weight: normal;
+    margin:30px auto;
+}
 
-  footer p{
+.carousel__contenedor{
+    position: relative;
     width: 80%;
+    margin: 0 auto;
+}
+
+.carousel__elemento > img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.mas{
+    text-decoration: none;
+    color:#fff;
+    font-size: 20px;
+    text-shadow: 2px 2px#666666;
+    box-shadow: 2px 2px#666666;
+    padding: 15px 80px;
+    border-radius: 28px;
+    background: linear-gradient(#3498db, #2980b9);
+}
+
+.mas:hover{
+    background: linear-gradient(#3cb0fd, #3498db);
+}
+
+.center{
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.carousel__anterior1, .carousel__siguiente1, .carousel__anterior2, .carousel__siguiente2{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #000;
+    opacity: 20%;
+}
+
+.carousel__anterior1:hover, .carousel__siguiente1:hover, .carousel__anterior2:hover, .carousel__siguiente2:hover{
+    opacity: 100%;
+}
+
+
+.carousel__anterior1, .carousel__anterior2{
+    left: -30px;
+}
+
+.carousel__siguiente1, .carousel__siguiente2{
+    right: -30px;
+}
+
+.carousel__lista1, .carousel__lista2{
+    overflow: hidden;
+}
+
+.carousel__elemento{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.carousel__indicadores1 .glider-dot, .carousel__indicadores2 .glider-dot{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    opacity: .2;
+    border-radius: 0;
+    margin: 10px 3px 40px;
+}
+
+.carousel__indicadores1 .glider-dot:hover{
+    opacity: .1;
+}
+
+.carousel__indicadores2 .glider-dot:hover{
+    opacity: .1;
+}
+
+
+.carousel__indicadores1 .glider-dot:active{
+    opacity: 1;
+}
+
+.carousel__indicadores2 .glider-dot:active{
+    opacity: 1;
+}
+/*SOBRE NOSOTROS*/
+
+.acerca-de{
+    /*width: 100%;
+    margin-top: 120px;*/
+
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background: url(../almohadones/20200902_185300.jpg);
+   background-attachment: fixed;  /* EFECTO PARALAX - NO SE MUEVE EN EL SCROLL */
+   background-position: center;
+   background-size: cover;
+}
+
+.acerca-de .opacity-container{
+    /*width: 80%;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;*/
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px 0;
+    background: rgba(0, 0, 0, .6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+.acerca-de .info-container{
+    width: 28%;
+    height: 90%;
+    background: #f3f3f3;
+    border-radius: 35px;
+}
+
+.acerca-de .info-container h3{
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+
+.acerca-de .info-container p{
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0;
+}
+
+.acerca-de .icon-info{
+    
+    margin: 10% 0;
     text-align: left;
-  }
+}
+
+/*FOOTER*/
+
+.footer  .footer-text{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, .8);
+    border-top: 5px solid #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer  .footer-text p{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
