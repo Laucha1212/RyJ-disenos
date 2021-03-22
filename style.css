@@ -23,6 +23,7 @@ body{
    width: 100%;
    height: 60px;
    background: #FDFDFD;
+   border-bottom: 3px solid #ff2e63;
 
    display: flex;
    justify-content: space-between;
@@ -37,6 +38,7 @@ body{
 .menu .logo-box h1{
    font-size: 35px;
    font-weight: 400;
+   text-align: center;
 }
 
 .volver{
@@ -53,7 +55,7 @@ body{
     color: #000;
 }
 
-.volver a:hover:hover{
+.volver a:hover{
     color: #f23528;
 }
 
@@ -88,13 +90,14 @@ body{
 }
 
 .img-header .welcome h2{
-   font-size: 50px;
+   font-size: 60px;
    color: #fff;
-   font-weight: 200;
+   font-weight: 400;
+   text-align: center;
 }
 
 .img-header .welcome hr{
-   width: 400px;
+   width: 80%;
    height: 2px;
    background: #fff;
    border: none;
@@ -105,6 +108,7 @@ body{
    font-size: 20px;
    color: #fff;
    margin-top: 20px;
+   text-align: center;
 }
 
 
@@ -269,8 +273,9 @@ body{
 }
 
 .acerca-de .info-container{
-    width: 28%;
-    height: 90%;
+    width: 40%;
+    margin-top: 10vh;
+    height: auto;
     background: #f3f3f3;
     border-radius: 35px;
 }
@@ -299,7 +304,7 @@ body{
 
 /*FOOTER*/
 
-.footer  .footer-text{
+.footer  .footer-shadow{
     bottom: 0;
     left: 0;
     width: 100%;
@@ -316,4 +321,113 @@ body{
     color: #fff;
     font-size: 20px;
     text-align: center;
+}
+
+/*---------MEDIA QUERYS---------*/
+@media screen and (min-width: 200px) and (max-width: 450px){
+
+    /*MENU*/
+    header .menu .logo-box h1{
+        font-size: 20px;
+        font-style: bold;
+        padding: 0;
+        margin: auto;
+        width: 0;
+        text-align: center;
+
+    }
+
+    header .menu .logo-box h1 span{
+        visibility: hidden;
+    }
+
+    header .menu .volver a{
+        font-size: 15px;
+    }
+
+    /*IMG HEADER*/
+    .img-header .welcome h2{
+        font-size: 35px;
+    }
+    .img-header .welcome p{
+        font-size: 15px;
+    }
+
+    /*carouseles*/
+    .carouseles h2{
+        font-size: 35px;
+    }
+
+    /*mas*/
+    .mas{
+        padding: 15px 40px;
+    }
+
+    /*acerca de*/
+
+    .acerca-de{
+        height: 180vh;
+    }
+    .acerca-de .opacity-container{
+        height: 100%;
+        padding: 20px 0;
+    }
+
+    .acerca-de .info-container{
+        height: auto;
+        width: 85%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 800px){
+    header .menu .logo-box h1{
+        font-size: 30px;
+    }
+
+    .img-header .welcome h2{
+        font-size: 40px;
+    }
+
+    .carouseles h2{
+        font-size: 40px;
+    }
+
+    .acerca-de{
+        height: 160vh;
+    }
+    .acerca-de .opacity-container{
+        height: 100%;
+        padding: 20px 0;
+    }
+
+    .acerca-de .info-container{
+        height: auto;
+        width: 70%;
+        margin: auto;
+    }
+
+    .acerca-de .info-container h3{
+        font-size: 25px;
+    }
+}
+@media screen and (min-width: 800px){
+    .acerca-de{
+        height: 130vh;
+    }
+
+    .acerca-de .opacity-container{
+        height: 100%;
+        padding: 20px 0;
+    }
+
+    .acerca-de .info-container{
+        height: auto;
+        width: 50%;
+        margin: auto;
+    }
+
+    .acerca-de .info-container h3{
+        font-size: 30px;
+    }
 }
